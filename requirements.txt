@@ -1,0 +1,8 @@
+# Requirements for apass_phot3.py and query_apass2.py
+# Photometry (apass_phot3.py): numpy, astropy, photutils
+# Catalogue query (query_apass2.py): astroquery, astropy
+
+numpy>=1.24
+astropy>=5.3
+photutils>=1.9
+astroquery>=0.4.6
