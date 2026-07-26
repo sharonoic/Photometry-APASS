@@ -24,3 +24,17 @@ Instructions for setting up `apass_phot3.py` and `query_apass2.py`.
    Each target needs its own working directory containing:
    - `apass_ref.csv` (produced by `query_apass2.py`
    - the calibrated `.new` FITS frame to be photometered (one per filter)
+
+## How to use
+1. Copy `apass_phot3.py` and `query_apass2.py` to the directory containing your image data files
+2. Solve images with astrometry.net <br>
+   `solve-field -p -D $PWD *.fits` <br>
+   (You may have to install astrometry.net if not yet by: `sudo apt install astrometry.net)
+3. Query APASS catalogue <br>
+   Change the ra and dec fields in `query_apass2.py` to your object's ra and dec <br>
+   `python3 query_apass2.py`
+4. Run photometry <br>
+   Change the ra and dec fields in `apass_phot3.py` to your object's ra and dec <br>
+   `python3 apass_phot.py`
+5. Check results <br>
+   `cat nova_phot_apass.txt`
